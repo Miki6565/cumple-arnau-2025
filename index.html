@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Arnau</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Feliz cumpleaños Arnau</h1>
+    <p>Por todos estos años de amistad y los que quedan.</p>
+    <div class="container">
+        <div class="gift closed" onclick="toggleGift(this)">
+            <div class="lid"></div>
+            <img src="file:///C:/Users/wikto/Desktop/Cumple%20Arnau/IMG_9268.JPG" class="photo" alt="Foto 1">
+        </div>
+        <div class="gift closed" onclick="toggleGift(this)">
+            <div class="lid"></div>
+            <img src="file:///C:/Users/wikto/Desktop/Cumple%20Arnau/IMG_9045.JPG" class="photo" alt="Foto 2">
+        </div>
+        <div class="gift closed" onclick="toggleGift(this)">
+            <div class="lid"></div>
+            <img src="file:///C:/Users/wikto/Desktop/Cumple%20Arnau/IMG_8711.JPG" class="photo" alt="Foto 3">
+        </div>
+    </div>
+    <script>
+        function toggleGift(gift) {
+            if (gift.classList.contains("closed")) {
+                gift.classList.remove("closed");
+                gift.classList.add("open");
+            } else {
+                gift.classList.remove("open");
+                gift.classList.add("closed");
+            }
+        }
+        function createNote() {
+            const note = document.createElement("div");
+            note.classList.add("note");
+            note.innerHTML = "🎵";
+            note.style.left = Math.random() * window.innerWidth + "px";
+            note.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(note);
+            setTimeout(() => note.remove(), 5000);
+        }
+        setInterval(createNote, 500);
+    </script>
+</body>
+</html>
