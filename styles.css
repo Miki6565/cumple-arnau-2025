@@ -1,19 +1,18 @@
-body {
+html, body {
     background: url('https://static.vecteezy.com/system/resources/previews/002/381/857/non_2x/happy-birthday-background-free-vector.jpg') no-repeat center center fixed;
     background-size: cover;
     text-align: center;
     font-family: Arial, sans-serif;
     color: #6b5b95;
-    min-height: 100vh; /* Allow scrolling */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Fix title visibility */
+    height: auto;  /* Allow content to expand */
+    min-height: 100vh; /* Ensure full page height */
+    display: block; /* Remove flex restriction */
     overflow-y: auto; /* Enable scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent unwanted side scrolling */
     position: relative;
-    padding-bottom: 100px; /* Extra space for scrolling */
+    padding-bottom: 150px; /* Extra space at the bottom for visibility */
 }
+
 
 
 h1 {
