@@ -4,14 +4,15 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     color: #6b5b95;
-    min-height: 100vh;  /* Allow scrolling */
+    min-height: 100vh; /* Allow scrolling */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Fix title visibility */
     overflow-y: auto; /* Enable scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     position: relative;
-    padding-bottom: 50px; /* Ensure space for last gift */
+    padding-bottom: 100px; /* Extra space for scrolling */
 }
 
 
