@@ -4,14 +4,16 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     color: #6b5b95;
-    height: 100vh;
+    min-height: 100vh;  /* Allow scrolling */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    justify-content: flex-start; /* Fix title visibility */
+    overflow-y: auto; /* Enable scrolling */
     position: relative;
+    padding-bottom: 50px; /* Ensure space for last gift */
 }
+
 
 h1 {
     font-size: 4em;
